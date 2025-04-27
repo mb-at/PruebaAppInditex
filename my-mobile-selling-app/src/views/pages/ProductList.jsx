@@ -19,8 +19,6 @@ export default function ProductList() {
     p.model.toLowerCase().includes(filter.toLowerCase())
   )
 
-  const toDisplay = filtered.slice(0, 8)
-
   return (
     <section className="product-section">
       <div className="search-container">
@@ -31,7 +29,7 @@ export default function ProductList() {
       />
       </div>
       <div className="product-grid">
-        {toDisplay.map(p => (
+        {filtered.map(p => (
           <ProductItem key={p.id} product={p} />
         ))}
       </div>
