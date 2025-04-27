@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { getAllProducts } from '../../controllers/ProductController'
-import Search from '../components/Search'
+import Search from '../components/SearchBar'
 import ProductItem from '../components/ProductItem'
 import './ProductList.css'
 
 export default function ProductList() {
-  const [all, setAll] = useState([])
-  const [filter, setFilter] = useState('')
+  const [all, setAll] = useState([])       
+  const [filter, setFilter] = useState('') 
 
   useEffect(() => {
     getAllProducts()
-      .then(data => setAll(data.slice(0, 10)))
+      .then(data => setAll(data))         
       .catch(console.error)
   }, [])
 
@@ -19,13 +19,19 @@ export default function ProductList() {
     p.model.toLowerCase().includes(filter.toLowerCase())
   )
 
+  const toDisplay = filtered.slice(0, 8)
+
   return (
     <section className="product-section">
       <div className="search-container">
-        <Search value={filter} onChange={setFilter} />
+      <Search
+        value={filter}
+        onChange={newValue => setFilter(newValue)}
+        placeholder="Buscar por marca o modelo"
+      />
       </div>
       <div className="product-grid">
-        {filtered.map(p => (
+        {toDisplay.map(p => (
           <ProductItem key={p.id} product={p} />
         ))}
       </div>
