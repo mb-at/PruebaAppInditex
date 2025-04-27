@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link }      from 'react-router-dom';
-import { getProduct }           from '../../controllers/ProductController';
-import { addToCart }            from '../../controllers/CartController';
+import { useParams, Link } from 'react-router-dom';
+import { getProduct } from '../../controllers/ProductController';
+import { addToCart } from '../../controllers/CartController';
 import './ProductDetail.css';  
 
 export default function ProductDetail() {
