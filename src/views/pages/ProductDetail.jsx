@@ -15,7 +15,6 @@ export default function ProductDetail() {
   useEffect(() => {
     getProduct(id)
       .then(prod => {
-        console.log('🎯 Producto completo:', prod);
         setProduct(prod);
         // Inicializar selecciones con la primera opción disponible
         setColor(prod.options.colors[0].code);
@@ -30,7 +29,6 @@ export default function ProductDetail() {
   const handleAdd = async () => {
     try {
       const { count } = await addToCart({ id, colorCode: color, storageCode: storage });
-      console.log('Productos en carrito:', count);
       alert(`Añadido al carrito. Total items: ${count}`);
     } catch (e) {
       console.error(e);
