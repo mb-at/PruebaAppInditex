@@ -40,8 +40,6 @@ export default function ProductDetail() {
 
   return (
     <section className="pdp-section">
-      <Link to="/" className="pdp-back">← Volver al listado</Link>
-
       <div className="pdp-container">
         {/* Columna imagen */}
         <div className="pdp-image">

@@ -14,9 +14,9 @@ export default function ProductItem({ product }) {
             borderRadius: '4px',
             overflow: 'hidden',
             boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
-            minHeight: '380px',         
+            minHeight: '350px',         
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'column'
         }}
         >
         <img
@@ -24,7 +24,7 @@ export default function ProductItem({ product }) {
             alt={`${product.brand} ${product.model}`}
             style={{
             width: '100%',
-            height: '240px',          
+            height: '250px',          
             objectFit: 'cover',
             flexShrink: 0,
             }}

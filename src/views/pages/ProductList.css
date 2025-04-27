@@ -12,20 +12,15 @@
   
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 1.5rem;
+    justify-content: center;
 }
-  
+
 .product-item {
-    background: #1a1a1a;
-    border: 1px solid #444;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 30px; /* altura mínima */
+    width: 100%;
+    max-width: 350px;
 }
-  
 .product-item img {
     width: 100%;
     height: auto;
