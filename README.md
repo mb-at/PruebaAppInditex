@@ -15,7 +15,7 @@ Pequeña y sencilla SPA en React para listar y ver detalles de dispositivos móv
 - React Router v7  
 - Axios para llamadas HTTP  
 - ESLint + Prettier  
-- Jest + Testing Library  
+- Vite + Testing Library  
 
 ## Instalación
 
