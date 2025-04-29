@@ -1,0 +1,55 @@
+:root {
+    --content-padding: 1rem;
+    --max-content-width: 1200px;
+  }
+  
+  .header {
+    background: #242424;
+    border-bottom: 1px solid #444;
+  }
+  
+  .header__inner {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: var(--content-padding) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header__logo {
+    font-size: 2.5rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .header__cart {
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  .breadcrumb {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 var(--content-padding) 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .breadcrumb__link {
+    color: #aaa;
+    text-decoration: none;
+  }
+  
+  .breadcrumb__link:hover {
+    color: #646cff;
+  }
+  
+  .breadcrumb__sep {
+    margin: 0 0.5rem;
+    color: #555;
+  }
+  
+  .breadcrumb__current {
+    color: #fff;
+  }
+  
