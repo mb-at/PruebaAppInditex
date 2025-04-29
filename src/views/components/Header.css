@@ -4,6 +4,11 @@
   }
   
   .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--bg);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     background: #242424;
     border-bottom: 1px solid #444;
   }
